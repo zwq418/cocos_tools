@@ -11,8 +11,12 @@ https://nodejs.org/en
 ```javascript
 // 需要修改内容的目录
 const DIR_PATH = 'assets/';
-// 需要修改内容的文件
+// 需要修改内容的后缀
 const FILE_EXT = '.meta';
+// 需要修改的图片类型，[]表示所有，['.pac', '.png', '.jpg']包含.pac（自动图集)、png、jpg格式
+const IMAGE_TYPES = ['.pac', '.png', '.jpg'];
+// 需要排除的同名类型，[]表示不排除，['.json']不修改含json后缀的同名文件，例如spine、龙骨
+const EXCLUSIVE_EXTS = ['.json'];
 // 需要替换的属性
 const REPLACE_KEY = 'platformSettings';
 // 替换后的内容
